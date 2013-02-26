@@ -1,0 +1,177 @@
+/* Compass importes
+@import "compass/css3/text-shadow"
+@import "compass/css3/font-face"
+@import "compass/css3/transition"
+
+/* Fonts */
++font-face("CantarellRegular", font-files("/assets/cantarell-regular-webfont.woff", woff, "/assets/cantarell-regular-webfont.ttf", truetype, "/assets/cantarell-regular-webfont.svg", svg), "/assets/cantarell-regular-webfont.eot", 300, normal)
++font-face("CantarellBold", font-files("/assets/cantarell-bold-webfont.woff", woff, "/assets/cantarell-bold-webfont.ttf", truetype, "/assets/cantarell-bold-webfont.svg", svg), "/assets/cantarell-bold-webfont.eot", 300, normal)
+
+
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a.ui-state-focus
+  background: $whiteDark
+  +text-shadow(none)
+  border: none
+  +border-radius(0px)
+
+
+body.rails_admin
+
+  /* all */
+  .well
+    +box-shadow(none)
+    border: 1px solid whiteSmoke
+
+  a
+    +single-transition(all, 0.3s, ease)
+    &:hover
+      text-decoration: none
+
+  .img-polaroid
+    padding: 0
+
+  .breadcrumb
+    padding: 8px 0px
+    background: none
+    border-bottom: 1px solid whiteSmoke
+
+  /* Nav header */
+  .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner
+    +box-shadow(none)
+
+  .navbar .brand
+    +text-shadow(none)
+    text-transform: uppercase
+    +font-bold
+    small
+      font-weight: normal
+      padding-left: 20px
+
+  /* Navigation */
+  .well.sidebar-nav
+    border: 0px solid whiteSmoke
+    +box-shadow(none)
+    border-right: 1px solid whiteSmoke
+    background: none
+
+  .nav > li > a:hover
+    background-color: whiteSmoke
+
+  .nav-list > .active > a, .nav-list > .active > a:hover
+    background: none
+    font-family: FontAwesome
+    +text-shadow(none)
+    color: $black
+    &::before
+      content: ""
+      margin: 0 5px 0 -15px
+
+  .navbar .nav > li > a, .nav-list > li > a
+    +text-shadow(none)
+    font-size: 1.1em
+
+  .nav-header
+    font-size: 1.3em
+    +font-bold
+
+
+  /* Content */
+  .page-header, .modal-header
+    border-bottom: 1px solid whiteSmoke
+    h1, h3
+      +font-bold
+
+  .content
+
+    .nav.nav-tabs
+      margin-bottom: 0px
+      li > a
+        +border-radius(2px 2px 0 0)
+      li.active a
+        background-color: $whiteDark
+
+    .table
+      padding-top: 20px
+      border: 1px solid $whiteDark
+      border-top: 0px
+      .headerSortUp, .headerSortDown
+        background-color: $whiteDarker
+      th
+        +font-bold
+        letter-spacing: 0em
+
+    #list
+      .pjax-form.form-inline
+        margin-bottom: 0px
+        .well
+          background-color: $whiteDark
+          border-top: 0px solid transparent
+          margin-bottom: 0px
+
+    .form-horizontal.denser
+      margin-bottom: 20px
+      border: 1px solid whiteSmoke
+      border-top: none
+      +border-radius(2px)
+      background-color: $whiteDark
+      .rich_editor_type
+        padding-right: 10px
+      .form-actions
+        border: none
+
+  /* Nested form */
+  .form-horizontal .tab-content .tab-pane
+    border-left: 5px solid  $whiteDarker
+
+  .form-horizontal.denser .controls .nav
+    margin-bottom: 0px
+
+
+  /* Modal */
+  .modal
+    +border-radius(0px)
+    .modal-body
+      background-color: $whiteDark
+    .modal-footer
+      border: none
+      background-color: $whiteDark
+      +box-shadow(none)
+
+  /* Inputs */
+  .cke_chrome
+    +box-shadow(none)
+
+  textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
+    +box-shadow(none)
+    &:hover
+      +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
+    &:focus
+      +box-shadow(none)
+      border-color: $grayLight
+
+  /* Dropdown */
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a
+    background: none
+    background-color: $whiteDark
+
+  .nav-tabs .dropdown-menu
+    +border-radius(0 0 4px 4px)
+    +box-shadow(none)
+
+  .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover
+    color: $black
+    border-color: whiteSmoke
+    background-color: $whiteDark
+
+  /* Bouton */
+  .btn
+    +single-transition(all, 0.3s, ease)
+    &:hover
+      +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0px 1px rgba(0, 0, 0, 0.05))
+    &:focus, &:active
+      outline: none
+      +box-shadow(inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05))
