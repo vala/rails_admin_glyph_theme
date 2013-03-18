@@ -1,13 +1,10 @@
-= Rails_Admin Theme by Glyph
+= Rails_admin Theme by Glyph
 
 Then add to your application Gemfile (before RailsAdmin):
 
-```ruby
 gem 'rails_admin_glyph_theme', git: 'git://github.com/vala/rails_admin_glyph_theme.git'
-```
-Inside your rails_admin application config/application.rb, just after Bundler.require:
-```ruby
-ENV['RAILS_ADMIN_THEME'] = 'glyph_theme'
-```
-This will allow for convenient live development testing.
 
+
+Inside your rails_admin application config/application.rb, just after Bundler.require:
+
+ENV['RAILS_ADMIN_THEME'] = 'glyph_theme'
