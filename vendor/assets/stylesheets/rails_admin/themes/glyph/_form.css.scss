@@ -1,0 +1,76 @@
+
+/* Input Style Default */
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input{
+  border: 1px solid $inputBorder;
+  border-top: 1px solid darken($inputBorder, 5%);
+  @include box-shadow(rgba(0,0,0,0.1) 0px 1px 2px 0px inset);
+  @include single-transition(all, 0.2s, linear);
+  // Hover state
+  &:hover{
+    background-color: darken($inputBackground, 0.7%);
+    border: 1px solid darken($inputBorder, 2%);
+    border-top: 1px solid darken($inputBorder, 7%);
+    @include box-shadow(rgba(0,0,0,0.2) 0px 1px 2px 0px inset);
+  }
+  // Focus state
+  &:focus{
+    border: 1px solid darken($inputBorder, 3%);
+    border-top: 1px solid darken($inputBorder, 8%);
+    @include box-shadow(rgba(0,0,0,0.3) 0px 1px 2px 0px inset);
+    outline: 0;
+  }
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly]{
+  &:hover{
+    background-color: $inputDisabledBackground;
+  }
+}
+
+/* ?? */
+.cke_chrome{
+  @include box-shadow(none);
+}
+
+/* Nested form */
+.form-horizontal .tab-content .tab-pane{
+  border-left: 5px solid  $whiteDarker;
+}
+.form-horizontal.denser .controls .nav{
+  margin-bottom: 0px;
+}
+
+.content .form-horizontal.denser{
+  margin-bottom: 20px;
+  border: 1px solid whiteSmoke;
+  border-top: none;
+  @include border-radius(2px);
+  background-color: $whiteDark;
+  .rich_editor_type{
+    padding-right: 10px;
+  }
+  .form-actions{
+    border: none;
+  }
+}

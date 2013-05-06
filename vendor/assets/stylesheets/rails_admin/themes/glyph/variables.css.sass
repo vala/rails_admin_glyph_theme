@@ -1,0 +1,230 @@
+// ------------------------  Padding ------------------------- //
+$paddingLarge:          11px 19px // 44px
+$paddingSmall:          2px 10px  // 26px
+$paddingMini:           0px 6px   // 22px
+
+// ------------------------  Radius ------------------------- //
+$baseBorderRadius: 1px
+$borderRadiusLarge: 2px
+$borderRadiusSmall: 0px
+
+// ------------------------  Colors ------------------------- //
+$black: #000
+
+$grayDark: #333
+$grayDarker: #222
+$gray: #555
+$grayLight: #999
+$grayLighter: #eee
+
+$white: #fff
+$whiteDark: #FAFAFA
+$whiteDarker: #DDD
+
+$blue: #008bc5
+$blueDark: #0060c5
+
+$green: #46a546
+$red: #9d261d
+$yellow: #ffc40d
+$orange: #f89406
+$pink: #c3325f
+$purple: #7a43b6
+
+// ------------------------ Scaffolding ------------------------- //
+$bodyBackground: $white
+$textColor: $grayDark
+
+// ------------------------ Links ------------------------------ //
+$linkColor: $grayDarker
+$linkColorHover: lighten($linkColor, 5%)
+
+// ------------------------ Typography ------------------------- //
+$hrBorder: $grayLighter
+
+$sansFontFamily: CantarellRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif
+$serifFontFamily: Georgia, 'Times New Roman', Times, serif
+$monoFontFamily: Monaco, Menlo, Consolas, 'Courier New', monospace
+$baseFontSize: 14px
+$baseLineHeight: 20px
+$headingsColor: inherit
+$headingsFontFamily: inherit
+$headingsFontWeight: bold
+$baseFontFamily: $sansFontFamily
+$altFontFamily: $serifFontFamily
+
+// ------------------------ Navigation  ------------------------- //
+$navbarHeight: 50px
+$navbarBackground: $whiteDark
+$navbarBackgroundHighlight: $grayLighter
+$navbarBorder: transparent
+
+$navbarText: $gray
+
+$navbarLinkColor: $gray
+$navbarLinkColorHover: $grayDark
+$navbarLinkColorActive: $grayDarker
+$navbarLinkBackgroundHover: rgba(0, 0, 0, 0.02)
+$navbarLinkBackgroundActive: rgba(0, 0, 0, 0.02)
+
+$navbarBrandColor: $navbarLinkColor
+
+$navbarSearchBackground: lighten($navbarBackground, 25%)
+$navbarSearchBackgroundFocus: $black
+$navbarSearchBorder: darken($navbarSearchBackground, 30%)
+$navbarSearchPlaceholderColor: $gray
+
+$navbarCollapseWidth: 979px
+$navbarCollapseDesktopWidth: $navbarCollapseWidth + 1
+
+// ------------------------ Tables ----------------------------- //
+$tableBackground: transparent
+$tableBackgroundAccent: #F9F9F9
+$tableBackgroundHover: #F5F5F5
+$tableBorder: #DDDDDD
+
+// ------------------------ Forms ------------------------------ //
+$horizontalComponentOffset: 180px
+$placeholderText: $grayLight
+
+$inputHeight: $baseLineHeight + 10px
+$inputBackground: $white
+$inputBorder: $whiteDarker
+$inputBorderRadius: $baseBorderRadius
+$inputDisabledBackground: $grayLighter
+
+$formActionsBackground: transparent
+
+// ------------------------ Buttons ---------------------------- //
+$btnBorder: $whiteDarker
+
+$btnBackground: $white
+$btnBackgroundHighlight: darken($btnBackground, 3%)
+
+$btnPrimaryBackground: lighten($blueDark, 5%)
+$btnPrimaryBackgroundHighlight: darken($btnPrimaryBackground, 5%)
+
+$btnInfoBackground: lighten($blue, 5%)
+$btnInfoBackgroundHighlight: darken($btnInfoBackground, 5%)
+
+$btnSuccessBackground:  lighten($green, 5%)
+$btnSuccessBackgroundHighlight: darken($green, 5%)
+
+$btnWarningBackground: lighten($orange, 5%)
+$btnWarningBackgroundHighlight: darken($orange, 5%)
+
+$btnDangerBackground: lighten($red, 5%)
+$btnDangerBackgroundHighlight: darken($red, 0%)
+
+$btnInverseBackground: lighten($black, 35%)
+$btnInverseBackgroundHighlight: darken($black, 5%)
+
+// -------------------  Form states & alerts -------------------- //
+$warningText:             #c09853 !default
+$warningBackground:       #fcf8e3 !default
+$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default
+
+$errorText:               #b94a48 !default
+$errorBackground:         #f2dede !default
+$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default
+
+$successText:             #468847 !default
+$successBackground:       #dff0d8 !default
+$successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default
+
+$infoText:                #3a87ad !default
+$infoBackground:          #d9edf7 !default
+$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default
+
+// ---------------------------- Well --------------------------- //
+$wellBackground: $whiteDark
+
+
+// -----------------  Sprite icons path DISABLE ---------------- //
+$iconSpritePath:          ""
+$iconWhiteSpritePath:     ""
+
+// ---------------------------- HeroUnit ----------------------- //
+$heroUnitBackground: $grayDarker
+$heroUnitHeadingColor: $grayLighter
+$heroUnitLeadColor: $grayLight
+
+// ----------------------------  Dropdown ----------------------- //
+$dropdownBackground: $white
+$dropdownBorder: $whiteDarker
+
+$dropdownDividerBottom: whiteSmoke
+$dropdownDividerTop: whiteSmoke
+
+$dropdownLinkColor: $grayLight
+$dropdownLinkColorHover: $gray
+$dropdownLinkColorActive: $gray
+
+$dropdownLinkBackgroundHover: $whiteDark
+$dropdownLinkBackgroundActive: $grayLighter
+
+// ---------------------------- Tooltip ------------------------ //
+$tooltipColor: #fff
+$tooltipBackground: #000
+$tooltipArrowWidth: 5px
+$tooltipArrowColor: $tooltipBackground
+
+// ---------------------------- Popover ------------------------ //
+$popoverBackground: #fff
+$popoverArrowWidth: 10px
+$popoverArrowColor: #fff
+$popoverTitleBackground: darken($popoverBackground, 3%)
+$popoverArrowOuterWidth: $popoverArrowWidth + 1
+$popoverArrowOuterColor: rgba(0,0,0,.25)
+
+// ---------------  Special enhancement for popovers ------------ //
+$popoverArrowOuterWidth:  $popoverArrowWidth + 1 !default
+$popoverArrowOuterColor:  rgba(0,0,0,.25) !default
+
+// -------------------------- Pagination ------------------------- //
+$paginationBackground: $grayLight
+$paginationBorder: transparent
+$paginationActiveBackground: $grayLighter
+
+// ----------------------------- Grids --------------------------- //
+$gridColumns: 12
+$gridColumnWidth: 60px
+$gridGutterWidth: 20px
+
+// ---------------------------- Tree --------------------------- //
+$treeBackgroundHover: #DFEEF5
+$treeBackgroundSelect: #B9DFF1
+
+
+// stuff you really shouldnt change
+
+// Based on 14px font-size and 20px line-height
+$fontSizeLarge:         $baseFontSize * 1.25 // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85 // ~12px
+$fontSizeMini:          $baseFontSize * 0.75 // ~11px
+
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1))
+$gridColumnWidth1200:     70px
+$gridGutterWidth1200:     30px
+$gridRowWidth1200:        ($gridColumns * $gridColumnWidth1200) + ($gridGutterWidth1200 * ($gridColumns - 1))
+
+$gridColumnWidth768:      42px
+$gridGutterWidth768:      20px
+$gridRowWidth768:         ($gridColumns * $gridColumnWidth768) + ($gridGutterWidth768 * ($gridColumns - 1))
+
+$fluidGridColumnWidth:    percentage($gridColumnWidth/$gridRowWidth)
+$fluidGridGutterWidth:    percentage($gridGutterWidth/$gridRowWidth)
+
+$fluidGridColumnWidth1200:     percentage($gridColumnWidth1200/$gridRowWidth1200)
+$fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200)
+
+$fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768)
+$fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768)
+
+$zindexDropdown: 1000
+$zindexFixedNavbar: 1030
+$zindexModal: 1050
+$zindexModalBackdrop: 1040
+$zindexPopover: 1010
+$zindexTooltip: 1030
+

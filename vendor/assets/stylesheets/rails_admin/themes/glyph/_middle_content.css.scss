@@ -1,0 +1,42 @@
+
+/* Content */
+.page-header,
+.modal-header{
+  border-bottom: 1px solid whiteSmoke;
+  h1, h3{
+    @include font-bold;
+  }
+}
+.content{
+  .nav.nav-tabs{
+    margin-bottom: 0px;
+    li > a{
+      @include border-radius(2px 2px 0 0);
+    }
+    li.active a{
+      background-color: $whiteDark;
+    }
+  }
+  .table{
+    padding-top: 20px;
+    border: 1px solid $whiteDark;
+    border-top: 0px;
+    .headerSortUp, .headerSortDown{
+      background-color: $whiteDarker;
+    }
+    th{
+      @include font-bold;
+      letter-spacing: 0em;
+    }
+  }
+  #list{
+    .pjax-form.form-inline{
+      margin-bottom: 0px;
+      .well{
+        background-color: $whiteDark;
+        border-top: 0px solid transparent;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

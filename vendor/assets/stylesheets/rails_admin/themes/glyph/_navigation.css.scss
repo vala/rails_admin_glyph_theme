@@ -1,0 +1,44 @@
+/* Nav header */
+  .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+    @include box-shadow(none);
+  }
+  .navbar .brand{
+    @include text-shadow(none);
+    text-transform: uppercase;
+    @include font-bold;
+    small{
+      font-weight: normal;
+      padding-left: 20px;
+    }
+  }
+  /* Navigation */
+  .well.sidebar-nav{
+    border: 0px solid whiteSmoke;
+    @include box-shadow(none);
+    border-right: 1px solid whiteSmoke;
+    background: none;
+  }
+  .nav > li > a:hover{
+    background-color: whiteSmoke;
+  }
+  .nav-list > .active > a,
+  .nav-list > .active > a:hover{
+    background: none;
+    font-family: FontAwesome;
+    @include text-shadow(none);
+    color: $black;
+    &::before{
+      content: "";
+      margin: 0 5px 0 -12px;
+      font-size: 12px;
+    }
+  }
+  .navbar .nav > li > a,
+  .nav-list > li > a{
+    @include text-shadow(none);
+    font-size: 1.1em;
+  }
+  .nav-header{
+    font-size: 1.3em;
+    @include font-bold;
+  }

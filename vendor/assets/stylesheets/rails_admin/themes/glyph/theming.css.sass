@@ -1,0 +1,94 @@
+/* Compass importes
+@import "compass/css3/text-shadow"
+@import "compass/css3/font-face"
+@import "compass/css3/transition"
+
+/* Fonts */
++font-face("CantarellRegular", font-files("/assets/cantarell-regular-webfont.woff", woff, "/assets/cantarell-regular-webfont.ttf", truetype, "/assets/cantarell-regular-webfont.svg", svg), "/assets/cantarell-regular-webfont.eot", 300, normal)
++font-face("CantarellBold", font-files("/assets/cantarell-bold-webfont.woff", woff, "/assets/cantarell-bold-webfont.ttf", truetype, "/assets/cantarell-bold-webfont.svg", svg), "/assets/cantarell-bold-webfont.eot", 300, normal)
+
+
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a.ui-state-focus
+  background: $whiteDark
+  +text-shadow(none)
+  border: none
+  +border-radius(0px)
+
+body.rails_admin
+
+  /* all */
+  .well
+    +box-shadow(none)
+    border: 1px solid whiteSmoke
+
+  a
+    +single-transition(all, 0.3s, ease)
+    &:hover
+      text-decoration: none
+
+  .img-polaroid
+    padding: 0
+
+  .breadcrumb
+    padding: 8px 0px
+    background: none
+    border-bottom: 1px solid whiteSmoke
+
+
+  @import "rails_admin/themes/glyph/navigation"
+  @import "rails_admin/themes/glyph/form"
+  @import "rails_admin/themes/glyph/button"
+  @import "rails_admin/themes/glyph/middle_content"
+
+
+  /* Modal */
+  .modal
+    +border-radius(0px)
+    .modal-body
+      background-color: $whiteDark
+    .modal-footer
+      border: none
+      background-color: $whiteDark
+      +box-shadow(none)
+
+
+
+  /* Dropdown */
+  .dropdown-menu
+    +border-radius($baseBorderRadius)
+    +box-shadow(none)
+
+  // Hover/Focus state
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus,
+  .dropdown-submenu:hover > a,
+  .dropdown-submenu:focus > a
+    +single-transition(all, 0.3s, ease)
+    text-decoration: none
+    color: $dropdownLinkColorHover
+    +flaten
+    background-color: $dropdownLinkBackgroundHover
+
+  // Active state
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus
+    +single-transition(all, 0.3s, ease)
+    color: $dropdownLinkColorActive
+    text-decoration: none
+    outline: 0
+    +flaten
+    background-color: $dropdownLinkBackgroundHover
+
+  .nav-tabs .dropdown-menu
+    +border-radius(0 0 4px 4px)
+    +box-shadow(none)
+
+  .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover
+    color: $black
+    border-color: whiteSmoke
+    background-color: $whiteDark
+
+
