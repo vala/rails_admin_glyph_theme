@@ -6,3 +6,26 @@
 @mixin flaten
   background-image: none
   filter: none
+
+@mixin fontAwesome
+  font-family: FontAwesome
+  font-weight: normal
+  font-style: normal
+  text-decoration: inherit
+  -webkit-font-smoothing: antialiased
+  /* sprites.less reset */
+  display: inline
+  width: auto
+  height: auto
+  line-height: normal
+  vertical-align: baseline
+  background-image: none
+  background-position: 0% 0%
+  background-repeat: repeat
+
+@mixin tabsContent
+  margin-bottom: 20px
+  border: 1px solid $whiteDarker
+  border-top: none
+  @include border-radius($baseBorderRadius)
+  background-color: $whiteDark

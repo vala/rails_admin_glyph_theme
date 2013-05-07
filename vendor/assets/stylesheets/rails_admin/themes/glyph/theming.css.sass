@@ -17,25 +17,22 @@
   +border-radius(0px)
 
 body.rails_admin
-
+  padding-top: 50px
   /* all */
   .well
     +box-shadow(none)
-    border: 1px solid whiteSmoke
+    border: 1px solid $whiteDarker
 
   a
     +single-transition(all, 0.3s, ease)
     &:hover
       text-decoration: none
 
+  .icon-white
+    color: white
+
   .img-polaroid
     padding: 0
-
-  .breadcrumb
-    padding: 8px 0px
-    background: none
-    border-bottom: 1px solid whiteSmoke
-
 
   @import "rails_admin/themes/glyph/navigation"
   @import "rails_admin/themes/glyph/form"
@@ -54,6 +51,13 @@ body.rails_admin
       +box-shadow(none)
 
 
+  /* Label */
+  .label
+    +border-radius($baseBorderRadius)
+    +font-bold
+    letter-spacing: 0px
+    &.label-info
+      background-color: $btnInfoBackground
 
   /* Dropdown */
   .dropdown-menu
@@ -83,7 +87,7 @@ body.rails_admin
     background-color: $dropdownLinkBackgroundHover
 
   .nav-tabs .dropdown-menu
-    +border-radius(0 0 4px 4px)
+    +border-radius(0 0 $baseBorderRadius $baseBorderRadius)
     +box-shadow(none)
 
   .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover
@@ -91,4 +95,17 @@ body.rails_admin
     border-color: whiteSmoke
     background-color: $whiteDark
 
-
+  /* Pagination */
+  .pagination
+    ul
+      +box-shadow(none)
+      li a
+        background-color: $white
+        border: 1px solid $whiteDarker
+        color: $grayLight
+        margin: 0px 1px
+      li a:hover,
+      li.active a
+        background: lighten($whiteDarker, 7%)
+        color: $black
+        border: 1px solid $grayLight

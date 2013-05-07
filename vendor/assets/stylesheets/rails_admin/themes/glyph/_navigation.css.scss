@@ -1,44 +1,92 @@
+/* New style for all link in nav */
+.navbar .nav > li > a,
+.nav-list > li > a{
+  @include text-shadow(none);
+  font-size: 1.1em;
+}
+.nav-header{
+  font-size: 1.3em;
+  @include font-bold;
+}
+
 /* Nav header */
-  .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
-    @include box-shadow(none);
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+  @include box-shadow(none);
+}
+.navbar .brand{
+  @include text-shadow(none);
+  text-transform: uppercase;
+  @include font-bold;
+  padding: 14px 0px 12px 35px;
+  small{
+    font-weight: normal;
+    font-size: 0.6em;
+    letter-spacing: 0px;
   }
-  .navbar .brand{
-    @include text-shadow(none);
-    text-transform: uppercase;
-    @include font-bold;
-    small{
-      font-weight: normal;
-      padding-left: 20px;
-    }
+}
+
+/* sidebar-nav */
+.well.sidebar-nav{
+  border-width: 0px;
+  @include box-shadow(none);
+  margin-bottom: 0;
+  border-right: 1px solid $whiteDarker;
+  background: none;
+}
+
+.nav-list{
+  padding-right: 0;
+}
+
+.nav-list > li > a,
+.nav-list .nav-header{
+  margin-right: 0px;
+  margin-left: 0px;
+}
+/* Li states */
+.nav-list > li{
+  border: 1px solid transparent;
+  margin: 1px 0px;
+  margin-right: -1px;
+  @include single-transition(all, 0.2s, ease);
+}
+.nav-list > .active,
+.nav-list > li:hover{
+  background: $white;
+  border-color: $whiteDarker;
+  border-right-color: white;
+}
+
+/* Links states */
+.nav-list > li > a{
+  padding-left: 22px;
+}
+.nav.nav-list > li > a:hover{
+  @include box-shadow(0px 0px 2px rgba(255,255,255, 0.5));
+  @include text-shadow(none);
+  color: $black;
+  background: none;
+}
+.nav-list > .active > a,
+.nav-list > .active > a:hover{
+  @include box-shadow(0px 0px 2px rgba(255,255,255, 0.5));
+  @include text-shadow(none);
+  color: $black;
+  background: none;
+  font-family: FontAwesome;
+  padding-left: 20px;
+  &::before{
+    content: "";
+    margin: 0 5px 0 -12px;
+    font-size: 12px;
+    padding-right: 1px;
   }
-  /* Navigation */
-  .well.sidebar-nav{
-    border: 0px solid whiteSmoke;
-    @include box-shadow(none);
-    border-right: 1px solid whiteSmoke;
-    background: none;
-  }
-  .nav > li > a:hover{
-    background-color: whiteSmoke;
-  }
-  .nav-list > .active > a,
-  .nav-list > .active > a:hover{
-    background: none;
-    font-family: FontAwesome;
-    @include text-shadow(none);
-    color: $black;
-    &::before{
-      content: "";
-      margin: 0 5px 0 -12px;
-      font-size: 12px;
-    }
-  }
-  .navbar .nav > li > a,
-  .nav-list > li > a{
-    @include text-shadow(none);
-    font-size: 1.1em;
-  }
-  .nav-header{
-    font-size: 1.3em;
-    @include font-bold;
-  }
+}
+
+/* No states in nav-header */
+.nav-list li.nav-header,
+.nav-list li.nav-header:hover{
+  padding-left: 0px;
+  border-width: 0px;
+  background: none;
+}

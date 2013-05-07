@@ -37,6 +37,16 @@ input[type="color"],
   }
 }
 
+input[type="radio"],
+input[type="checkbox"]{
+  margin-top: -5px;
+}
+
+input[type="file"]{
+  line-height: 0px;
+  margin-top: 5px;
+}
+/* Disabled states */
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -48,29 +58,21 @@ textarea[readonly]{
   }
 }
 
+/* Jquery UI */
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default{
+  @include flaten;
+  background: none;
+}
+
 /* ?? */
 .cke_chrome{
   @include box-shadow(none);
 }
-
-/* Nested form */
-.form-horizontal .tab-content .tab-pane{
-  border-left: 5px solid  $whiteDarker;
+.control-label{
+  padding-left: 10px;
 }
-.form-horizontal.denser .controls .nav{
-  margin-bottom: 0px;
-}
-
-.content .form-horizontal.denser{
-  margin-bottom: 20px;
-  border: 1px solid whiteSmoke;
-  border-top: none;
-  @include border-radius(2px);
-  background-color: $whiteDark;
-  .rich_editor_type{
-    padding-right: 10px;
-  }
-  .form-actions{
-    border: none;
-  }
+.controls{
+  line-height: 30px;
 }
