@@ -35,6 +35,10 @@
     li.active a{
       background-color: $whiteDark;
     }
+    li.active.delete_member_link a,
+    li.active.globalize_member_link a{
+      background-color: $white;
+    }
   }
   /* Tables style */
   .table{
