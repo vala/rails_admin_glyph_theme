@@ -58,29 +58,33 @@
 }
 
 /* Links states */
-.nav-list > li > a{
-  padding-left: 22px;
+.nav-list > li{
+  //  padding-left: 7px;
+  //  &.active{
+  //    padding-left: 0;
+  //  }
+   a{
+    font-size: 1.1em;
+  }
 }
 .nav.nav-list > li > a:hover{
-  @include box-shadow(0px 0px 2px rgba(255,255,255, 0.5));
   @include text-shadow(none);
   color: $black;
   background: none;
 }
 .nav-list > .active > a,
 .nav-list > .active > a:hover{
-  @include box-shadow(0px 0px 2px rgba(255,255,255, 0.5));
   @include text-shadow(none);
   color: $black;
   background: none;
-  font-family: FontAwesome;
-  padding-left: 20px;
-  &::before{
-    content: "";
-    margin: 0 5px 0 -12px;
-    font-size: 12px;
-    padding-right: 1px;
-  }
+//  &::before{
+//    font-family: FontAwesome;
+//    content: "";
+//    margin: 0 5px 0 -12px;
+//    font-size: 12px;
+//    padding-right: 1px;
+//    padding-left: 5px;
+//  }
 }
 
 /* No states in nav-header */
