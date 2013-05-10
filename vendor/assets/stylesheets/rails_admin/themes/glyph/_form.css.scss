@@ -1,3 +1,10 @@
+/* Overriding */
+.control-label{
+  padding-left: 10px;
+}
+.control-group .controls{
+  line-height: 30px;
+}
 
 /* Input Style Default */
 select,
@@ -37,9 +44,17 @@ input[type="color"],
   }
 }
 
+/* display radio & checkbox in middle */
 input[type="radio"],
 input[type="checkbox"]{
   margin-top: -5px;
+}
+
+.controls label.checkbox{
+  input[type="radio"],
+  input[type="checkbox"]{
+    margin: 4px 0 0 -20px;
+  }
 }
 
 input[type="file"]{
@@ -66,13 +81,29 @@ textarea[readonly]{
   background: none;
 }
 
+/* Multi select */
+.ra-multiselect .ra-multiselect-column{
+  line-height: 14px;
+  .ra-multiselect-item-remove-all,
+  .ra-multiselect-item-add-all{
+    line-height: 14px;
+  }
+  //  &.ra-multiselect-center .ui-icon{
+  //    width: 13px;
+  //    margin: 0px 5px;
+  //  }
+  //  .ui-icon{
+  //    @include fontAwesome;
+  //    &.ui-icon-circle-triangle-w:before{
+  //      content: "\f0a8";
+  //    }
+  //    &.ui-icon-circle-triangle-e:before{
+  //      content: "\f0a9";
+  //    }
+  //  }
+}
+
 /* ?? */
 .cke_chrome{
   @include box-shadow(none);
-}
-.control-label{
-  padding-left: 10px;
-}
-.controls{
-  line-height: 30px;
 }
