@@ -1,12 +1,6 @@
 /* Compass importes
 @import "compass/css3/text-shadow"
-@import "compass/css3/font-face"
 @import "compass/css3/transition"
-
-/* Fonts */
-+font-face("CantarellRegular", font-files("/assets/cantarell-regular-webfont.woff", woff, "/assets/cantarell-regular-webfont.ttf", truetype, "/assets/cantarell-regular-webfont.svg", svg), "/assets/cantarell-regular-webfont.eot", 300, normal)
-+font-face("CantarellBold", font-files("/assets/cantarell-bold-webfont.woff", woff, "/assets/cantarell-bold-webfont.ttf", truetype, "/assets/cantarell-bold-webfont.svg", svg), "/assets/cantarell-bold-webfont.eot", 300, normal)
-
 
 .ui-menu .ui-menu-item a.ui-state-hover,
 .ui-menu .ui-menu-item a.ui-state-active,
@@ -58,6 +52,11 @@ body.rails_admin
     letter-spacing: 0px
     &.label-info
       background-color: $btnInfoBackground
+
+  /* Progress bars */
+  .progress .bar
+    +flaten
+    line-height: 20px
 
   /* Dropdown */
   .dropdown-menu
