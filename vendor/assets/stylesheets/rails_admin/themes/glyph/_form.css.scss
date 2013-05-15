@@ -57,10 +57,13 @@ input[type="checkbox"]{
   }
 }
 
-input[type="file"]{
-  line-height: 0px;
-  margin-top: 5px;
+.fileupload-new .input-append .btn-file{
+  @include border-radius($baseBorderRadius);
 }
+//input[type="file"]{
+//  line-height: 0px;
+//  margin-top: 5px;
+//}
 
 /* Disabled states */
 input[disabled],

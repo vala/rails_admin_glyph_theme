@@ -1,0 +1,50 @@
+::-webkit-scrollbar{
+  /* Scrollbars */
+  width: 12px;
+  height: .875em;
+  background: $bodyBackground;
+}
+
+::-webkit-scrollbar-track-piece{
+  /* Fond */
+  background: transparent none;
+  margin: 1px 0 1px 0;
+  &:horizontal{
+    /* Fond pour la barre du bas */
+    margin: 0 1px 0 1px;
+  }
+}
+::-webkit-scrollbar-thumb{
+  /* Barre */
+  background: transparent;
+  -webkit-box-shadow: inset 0 0 0 1px darken($white, 20%), inset 0 0 0 6px darken($white, 10%);
+  -webkit-border-radius: 0;
+  border: solid 0px transparent;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  &:hover{
+    /* Barre */
+    -webkit-box-shadow: inset 0 0 0 1px darken($white, 30%), inset 0 0 0 6px darken($white, 20%);
+  }
+  &:horizontal{
+    /* Barre du bas */
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+  &:window-inactive{
+    -webkit-box-shadow: inset 0 0 0 1px darken($white, 10%), inset 0 0 0 6px darken($white, 5%);
+  }
+}
+
+::-webkit-scrollbar-corner{
+  /* Coin de la fenêtre */
+  background: $bodyBackground;
+}
+
+body{
+  ::-webkit-scrollbar{
+    background: transparent none;
+  }
+}
