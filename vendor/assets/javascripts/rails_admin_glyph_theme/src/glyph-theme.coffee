@@ -1,4 +1,5 @@
 $ ->
+  # Hack for Ipad
   $("body").on "touchstart.dropdown", ".dropdown-menu", (e) ->
     e.stopPropagation()
 
