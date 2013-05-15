@@ -112,13 +112,9 @@
 }
 .control-group.error .fileupload .uneditable-input {
   color: #b94a48;
-  border-color: #b94a48;
 }
 .control-group.error .fileupload .fileupload-preview {
   color: #b94a48;
-}
-.control-group.error .fileupload .thumbnail {
-  border-color: #b94a48;
 }
 .control-group.success .fileupload .uneditable-input {
   color: #468847;

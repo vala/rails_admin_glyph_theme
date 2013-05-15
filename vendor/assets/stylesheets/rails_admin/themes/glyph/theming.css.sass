@@ -1,6 +1,7 @@
 /* Compass importes
 @import "compass/css3/text-shadow"
 @import "compass/css3/transition"
+@import "compass/css3/inline-block"
 
 @import "rails_admin/themes/glyph/scrollbar"
 
@@ -24,6 +25,9 @@ body.rails_admin
     +single-transition(all, 0.3s, ease)
     &:hover
       text-decoration: none
+    &.link-img
+      +inline-block
+      margin: auto
 
   .icon-white
     color: white

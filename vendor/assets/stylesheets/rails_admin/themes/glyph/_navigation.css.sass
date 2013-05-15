@@ -1,0 +1,95 @@
+/* New style for all link in nav */
+.navbar .nav > li > a,
+.nav-list > li > a
+  +text-shadow(none)
+  font-size: 1.1em
+
+.nav-header
+  font-size: 1.3em
+  +font-bold
+
+
+/* Nav header */
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner
+  +box-shadow(none)
+
+.navbar .brand
+  +text-shadow(none)
+  text-transform: uppercase
+  +font-bold
+  padding: 14px 0px 12px 35px
+  small
+    font-weight: normal
+    font-size: 0.6em
+    letter-spacing: 0px
+
+
+
+/* sidebar-nav */
+.well.sidebar-nav
+  border-width: 0px
+  +box-shadow(none)
+  margin-bottom: 0
+  border-right: 1px solid $whiteDarker
+  background: none
+
+
+.nav-list
+  padding-right: 0
+
+
+.nav-list > li > a,
+.nav-list .nav-header
+  margin-right: 0px
+  margin-left: 0px
+
+/* Li states */
+.nav-list > li
+  border: 1px solid transparent
+  margin: 1px 0px
+  margin-right: -1px
+  +single-transition(all, 0.2s, ease)
+
+.nav-list > .active,
+.nav-list > li:hover
+  background: $white
+  border-color: $whiteDarker
+  border-right-color: white
+
+
+/* Links states */
+.nav-list > li
+  //  padding-left: 7px
+  //  &.active
+  //    padding-left: 0
+  //
+   a
+    font-size: 1.1em
+
+
+.nav.nav-list > li > a:hover
+  +text-shadow(none)
+  color: $black
+  background: none
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover
+  +text-shadow(none)
+  color: $black
+  background: none
+//  &::before
+//    font-family: FontAwesome
+//    content: ""
+//    margin: 0 5px 0 -12px
+//    font-size: 12px
+//    padding-right: 1px
+//    padding-left: 5px
+//
+
+
+/* No states in nav-header */
+.nav-list li.nav-header,
+.nav-list li.nav-header:hover
+  padding-left: 0px
+  border-width: 0px
+  background: none

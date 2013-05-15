@@ -1,0 +1,26 @@
+
+/* Btn Style Default */
+.btn
+  +box-shadow(none)
+  +flaten
+  +single-transition(all, 0.1s, linear)
+  // Hover/focus state
+  &:hover,
+  &:focus
+    +single-transition(all, 0.1s, linear)
+    outline: none
+    outline: 0
+    +box-shadow(rgba(0, 0 , 0 , 0.1) 0px 1px 2px 0px inset)
+
+  // Active state
+  &.active,
+  &:active
+    +flaten
+    outline: 0
+    +box-shadow(rgba(0, 0 , 0 , 0.3) 0px 1px 3px 0px inset)
+
+  &.btn-link
+    &:hover
+      +box-shadow(none)
+
+
