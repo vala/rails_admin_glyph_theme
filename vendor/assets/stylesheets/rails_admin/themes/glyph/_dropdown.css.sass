@@ -1,0 +1,37 @@
+/* Dropdown */
+.dropdown-menu
+  +border-radius($baseBorderRadius)
+  +box-shadow(none)
+
+// Hover/Focus state
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a
+  +single-transition(all, 0.3s, ease)
+  text-decoration: none
+  color: $dropdownLinkColorHover
+  +flaten
+  background-color: $dropdownLinkBackgroundHover
+
+// Active state
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus
+  +single-transition(all, 0.3s, ease)
+  color: $dropdownLinkColorActive
+  text-decoration: none
+  outline: 0
+  +flaten
+  background-color: $dropdownLinkBackgroundHover
+
+.nav-tabs .dropdown-menu
+  +border-radius(0 0 $baseBorderRadius $baseBorderRadius)
+  +box-shadow(none)
+
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover
+  color: $black
+  border-color: whiteSmoke
+  background-color: $whiteDark

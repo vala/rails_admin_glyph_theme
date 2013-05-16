@@ -1,9 +1,8 @@
+
 .page-header,
 .modal-header
   h1, h3
     +font-bold
-
-
 
 /* Breadcrumb */
 .breadcrumb
@@ -16,13 +15,9 @@
       a
         color: $grayLight
 
-
     .divider
       padding: 0 0 0 8px
       color: $grayLight
-
-
-
 
 /* Content */
 .content
@@ -38,7 +33,8 @@
     /* white background  */
     li.active.delete_member_link a,
     li.active.globalize_member_link a,
-    li.active.dashboard_root_link a
+    li.active.dashboard_root_link a,
+    li.active.show_member_link a
       background-color: $white
 
 
@@ -62,27 +58,23 @@
       color: $gray
 
 
-  /* New */
+  /* Styling all  */
   .form-horizontal .tab-content .tab-pane
     border-left: 5px solid  $whiteDarker
 
   .form-horizontal.denser .controls .nav
     margin-bottom: 0px
 
-
   .form-horizontal.denser
     +tabsContent
+    /* Input Group */
     legend
       i
         margin-left: 10px
-
-
-    .rich_editor_type
-      padding-right: 10px
+        font-size: 14px
 
     .form-actions
       border: none
-
 
   /* Listing */
   #list
@@ -95,8 +87,6 @@
         background-color: $whiteDark
         border-top: 0px solid transparent
         margin-bottom: 0px
-
-
 
   /* Nestable */
   #rails_admin_nestable
@@ -111,9 +101,6 @@
         border-color: $whiteDarker
         background: $white
 
-
-
-
 /* Nestable Item */
 .dd-item
   +single-transition(box-shadow, 0.3s, ease)
@@ -122,7 +109,6 @@
     &:before
       content: "\f047"
       font-size: 14px
-
 
   .dd-handle,
   .dd3-content
@@ -133,13 +119,10 @@
     &:before
       color: $black
 
-
   &:hover
     +box-shadow(0px 0px 3px rgba(0, 0, 0, 0.2) )
     .dd-handle
       cursor: move
-
-
 
 .dd-dragel
   .dd-item

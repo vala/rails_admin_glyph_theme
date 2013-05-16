@@ -53,10 +53,27 @@ class SpinnerBuilder
       @$el.data("spinner", this)
 
 
+class SelectBuilder
+
+  # input custom constructor
+  constructor: (@$el) ->
+    console.log @$el
+    $jquerySelect = @$el.closest('.controls').find('.filtering-select')
+    console.log $jquerySelect
+    if $jquerySelect.length
+    else
+      unless @$el.data("select")
+        @$el.closest('select').selectpicker()
+        # Store object in "spinner" data key on dom element
+        @$el.data("select", this)
+
+
+
 class FormInputs
   fieldTypes:
     'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
+    'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
     # # Constructor when page is loaded by pjax
@@ -75,4 +92,9 @@ $ ->
   $("body").on "touchstart.dropdown", ".dropdown-menu", (e) ->
     e.stopPropagation()
 
+  # Add class
+  $("body").addClass 'glyph-theme-js'
+
+
+  # Form Inputs constructor
   new FormInputs("form")

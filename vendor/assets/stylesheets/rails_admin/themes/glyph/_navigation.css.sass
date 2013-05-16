@@ -9,7 +9,6 @@
   +font-bold
   margin-top: 20px
 
-
 /* Nav header */
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner
   +box-shadow(none)
@@ -24,8 +23,6 @@
     font-size: 0.6em
     letter-spacing: 0px
 
-
-
 /* sidebar-nav */
 .well.sidebar-nav
   border-width: 0px
@@ -34,10 +31,8 @@
   border-right: 1px solid $whiteDarker
   background: none
 
-
 .nav-list
   padding-right: 0
-
 
 .nav-list > li > a,
 .nav-list .nav-header
@@ -47,7 +42,6 @@
 /* Li states */
 .nav-list > li
   border: 1px solid transparent
-  margin: 1px 0px
   margin-right: -1px
   +single-transition(all, 0.2s, ease)
 
@@ -57,16 +51,10 @@
   border-color: $whiteDarker
   border-right-color: white
 
-
 /* Links states */
 .nav-list > li
-  //  padding-left: 7px
-  //  &.active
-  //    padding-left: 0
-  //
-   a
+  a
     font-size: 1.1em
-
 
 .nav.nav-list > li > a:hover
   +text-shadow(none)
@@ -78,19 +66,10 @@
   +text-shadow(none)
   color: $black
   background: none
-//  &::before
-//    font-family: FontAwesome
-//    content: ""
-//    margin: 0 5px 0 -12px
-//    font-size: 12px
-//    padding-right: 1px
-//    padding-left: 5px
-//
-
 
 /* No states in nav-header */
-.nav-list li.nav-header,
-.nav-list li.nav-header:hover
+.nav-list > li.nav-header,
+.nav-list > li.nav-header:hover
   padding-left: 0px
   border-width: 0px
   background: none

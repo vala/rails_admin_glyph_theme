@@ -5,6 +5,14 @@
 .control-group .controls
   line-height: 30px
 
+/* UI select menu */
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a.ui-state-focus
+  background: $whiteDark
+  +text-shadow(none)
+  border: none
+  +border-radius(0px)
 
 /* Input Style Default */
 select,
@@ -23,7 +31,10 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-.uneditable-input
+.uneditable-input,
+.cke_contents,
+.cke_dialog_ui_input_textarea textarea,
+.cke_dialog_ui_input_text input
   border: 1px solid $inputBorder
   border-top: 1px solid darken($inputBorder, 5%)
   +box-shadow(rgba(0,0,0,0.1) 0px 1px 2px 0px inset)
@@ -49,12 +60,10 @@ input[type="radio"],
 input[type="checkbox"]
   margin-top: -5px
 
-
 .controls label.checkbox
   input[type="radio"],
   input[type="checkbox"]
     margin: 4px 0 0 -20px
-
 
 /* Fileupload */
 .uploaded-file img
@@ -63,7 +72,6 @@ input[type="checkbox"]
   margin-bottom: 0
 .fileupload-new .input-append .btn-file
   +border-radius($baseBorderRadius)
-
 
 /* Disabled states */
 input[disabled],
@@ -75,8 +83,6 @@ textarea[readonly]
   &:hover
     background-color: $inputDisabledBackground
 
-
-
 /* Jquery UI */
 .ui-state-default,
 .ui-widget-content .ui-state-default,
@@ -84,28 +90,12 @@ textarea[readonly]
   +flaten
   background: none
 
-
 /* Multi select */
 .ra-multiselect .ra-multiselect-column
   line-height: 14px
   .ra-multiselect-item-remove-all,
   .ra-multiselect-item-add-all
     line-height: 14px
-
-  //  &.ra-multiselect-center .ui-icon
-  //    width: 13px
-  //    margin: 0px 5px
-  //
-  //  .ui-icon
-  //    +fontAwesome
-  //    &.ui-icon-circle-triangle-w:before
-  //      content: "\f0a8"
-  //
-  //    &.ui-icon-circle-triangle-e:before
-  //      content: "\f0a9"
-  //
-  //
-
 
 /* ?? */
 .cke_chrome
