@@ -66,12 +66,19 @@ input[type="checkbox"]
     margin: 4px 0 0 -20px
 
 /* Fileupload */
-.uploaded-file img
-  margin-bottom: 5px
-.fileupload
-  margin-bottom: 0
-.fileupload-new .input-append .btn-file
-  +border-radius($baseBorderRadius)
+&.glyph-theme-js
+  .uneditable-input,
+  .uneditable-textarea
+    background-color: $inputDisabledBackground
+    &:hover
+      background-color: $inputDisabledBackground
+  .uploaded-file img,
+  .uploaded-file
+    margin-bottom: 5px
+  .fileupload
+    margin-bottom: 0
+  .fileupload-new .input-append .btn-file
+    +border-radius($baseBorderRadius)
 
 /* Disabled states */
 input[disabled],
@@ -97,7 +104,4 @@ textarea[readonly]
   .ra-multiselect-item-add-all
     line-height: 14px
 
-/* ?? */
-.cke_chrome
-  +box-shadow(none)
 

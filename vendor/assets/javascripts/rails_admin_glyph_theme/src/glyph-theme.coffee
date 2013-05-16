@@ -17,7 +17,7 @@ class FileUploadBuilder
     """
 
   constructor: (@$el) ->
-    $uploadedFile = @$el.parent().find('a').addClass('uploaded-file').remove()
+    $uploadedFile = @$el.parent().find('a, img').addClass('uploaded-file').remove()
 
     unless @$el.data("file-upload")
       $container = @$el.parent().html(@template)
@@ -54,7 +54,6 @@ class SpinnerBuilder
 
 
 class SelectBuilder
-
   # input custom constructor
   constructor: (@$el) ->
     console.log @$el
