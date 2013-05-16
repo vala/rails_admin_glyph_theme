@@ -56,12 +56,11 @@ class SpinnerBuilder
 class SelectBuilder
   # input custom constructor
   constructor: (@$el) ->
-    console.log @$el
     $jquerySelect = @$el.closest('.controls').find('.filtering-select')
-    console.log $jquerySelect
     if $jquerySelect.length
     else
       unless @$el.data("select")
+        $jqueryMultiSelect = @$el.closest('.controls').find('.ra-multiselect').remove()
         @$el.closest('select').selectpicker()
         # Store object in "spinner" data key on dom element
         @$el.data("select", this)

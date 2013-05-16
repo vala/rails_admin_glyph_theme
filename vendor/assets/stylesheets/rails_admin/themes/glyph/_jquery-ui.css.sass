@@ -1,0 +1,147 @@
+// /* Jquery UI */
+.ui-corner-all
+  +border-radius($baseBorderRadius)
+
+.ui-button
+  +flaten
+  background: none
+
+.ui-timepicker
+  .ui-widget-content
+    border: none
+
+  .ui-state-default,
+  .ui-widget-content .ui-state-default,
+  .ui-widget-header .ui-state-default
+    +flaten
+    border-width: 0px
+    &:hover
+      +box-shadow(rgba(0, 0 , 0 , 0.1) 0px 1px 2px 0px inset)
+    &.ui-state-active
+      background-color: $whiteDarker
+
+/* Date picker */
+.ui-datepicker,
+.ui-timepicker
+  border: 1px solid $whiteDarker
+  .ui-datepicker-header,
+  .ui-timepicker-title
+    +flaten
+    background-color: $whiteDark
+  .ui-datepicker-calendar
+    .ui-datepicker-today
+      +box-shadow(none)
+    .ui-state-default.ui-state-hover.ui-state-active
+      background: #5F83B9
+      border-color: #5F83B9
+      text-shadow: 0 1px 1px #234386
+
+
+
+/* Color Picker */
+
+.colorpicker
+  background-position: -3px
+  width: 350px
+  height: 170px
+  overflow: hidden
+  position: absolute
+  font-family: Arial, Helvetica, sans-serif
+  display: none
+  z-index: 999
+  input
+    line-height: normal
+    width: auto
+
+.colorpicker_color
+  width: 150px
+  height: 150px
+  left: 9px
+  top: 8px
+  position: absolute
+  background: #f00
+  overflow: hidden
+  cursor: crosshair
+  border: 2px solid $whiteDarker
+  div
+    position: absolute
+    top: 0
+    left: 0
+    width: 150px
+    height: 150px
+
+    div
+      position: absolute
+      top: 0
+      left: 0
+      width: 11px
+      height: 11px
+      overflow: hidden
+
+      margin: -5px 0 0 -5px
+
+.colorpicker_hue
+  position: absolute
+  top: 8px
+  left: 175px
+  width: 17px
+  height: 150px
+  cursor: n-resize
+
+  border: 2px solid $whiteDarker
+  div
+    position: absolute
+    width: 35px
+    height: 9px
+    overflow: hidden
+
+    margin: -4px 0 0 0
+    left: -9px
+
+.colorpicker_new_color
+  position: absolute
+  width: 60px
+  height: 30px
+  left: 208px
+  top: 8px
+  background: #f00
+  border: 2px solid $whiteDarker
+
+.colorpicker_current_color
+  position: absolute
+  width: 60px
+  height: 30px
+  left: 278px
+  top: 8px
+  background: #f00
+  border: 2px solid $whiteDarker
+
+.colorpicker input
+  background-color: transparent
+  border: 1px solid transparent
+  position: absolute
+  font-size: 10px
+  font-family: Arial, Helvetica, sans-serif
+  color: #898989
+  top: 2px
+  right: 10px
+  text-align: right
+  margin: 0
+  padding: 0
+  height: 13px
+  width: 30px
+  border: 1px solid $whiteDarker
+
+
+.colorpicker_field
+  height: 20px
+  width: 60px
+  background-position: top
+  position: absolute
+  input
+    width: 30px !important
+.colorpicker_hex input
+  width: 40px !important
+.colorpicker_hex.colorpicker_focus
+  background-position: top
+

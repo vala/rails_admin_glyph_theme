@@ -34,7 +34,7 @@ input[type="color"],
 .uneditable-input,
 .cke_contents,
 .cke_dialog_ui_input_textarea textarea,
-.cke_dialog_ui_input_text input
+.cke_dialog_ui_input_text input,
   border: 1px solid $inputBorder
   border-top: 1px solid darken($inputBorder, 5%)
   +box-shadow(rgba(0,0,0,0.1) 0px 1px 2px 0px inset)
@@ -53,8 +53,6 @@ input[type="color"],
     +box-shadow(rgba(0,0,0,0.3) 0px 1px 2px 0px inset)
     outline: 0
 
-
-
 /* display radio & checkbox in middle */
 input[type="radio"],
 input[type="checkbox"]
@@ -65,8 +63,9 @@ input[type="checkbox"]
   input[type="checkbox"]
     margin: 4px 0 0 -20px
 
-/* Fileupload */
+/* Glyph-theme-js OVERRIDING */
 &.glyph-theme-js
+  /* FileUpload */
   .uneditable-input,
   .uneditable-textarea
     background-color: $inputDisabledBackground
@@ -80,6 +79,14 @@ input[type="checkbox"]
   .fileupload-new .input-append .btn-file
     +border-radius($baseBorderRadius)
 
+  /* Bootstrap Select */
+  .bootstrap-select
+    &.btn-group,
+    &.btn-group[class*="span"]
+      margin-bottom: 0
+    .btn:focus
+      outline: 0 !important
+
 /* Disabled states */
 input[disabled],
 select[disabled],
@@ -89,19 +96,5 @@ select[readonly],
 textarea[readonly]
   &:hover
     background-color: $inputDisabledBackground
-
-/* Jquery UI */
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default
-  +flaten
-  background: none
-
-/* Multi select */
-.ra-multiselect .ra-multiselect-column
-  line-height: 14px
-  .ra-multiselect-item-remove-all,
-  .ra-multiselect-item-add-all
-    line-height: 14px
 
 
