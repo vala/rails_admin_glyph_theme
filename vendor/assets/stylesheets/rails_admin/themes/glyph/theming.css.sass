@@ -5,6 +5,14 @@
 
 @import "rails_admin/themes/glyph/scrollbar"
 
+/* Hack with modernizr about box-sizing */
+html.padding-added-to-minheight
+  body.glyph-theme-js
+    /* FileUpload */
+    .fileupload
+      .uneditable-input[class*="span"]
+        min-height: 20px
+
 body.rails_admin
   padding-top: 50px
 
@@ -32,6 +40,8 @@ body.rails_admin
     +single-transition(all, 0.3s, ease)
     &:hover
       text-decoration: none
+    &:focus
+      outline: none
     &.link-img
       +inline-block
       margin: auto

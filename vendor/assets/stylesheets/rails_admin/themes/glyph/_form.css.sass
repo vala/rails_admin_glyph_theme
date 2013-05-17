@@ -53,6 +53,13 @@ input[type="color"],
     +box-shadow(rgba(0,0,0,0.3) 0px 1px 2px 0px inset)
     outline: 0
 
+/* Focus states for others inputs */
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"]
+  &:focus
+    outline: 0
+
 /* display radio & checkbox in middle */
 input[type="radio"],
 input[type="checkbox"]

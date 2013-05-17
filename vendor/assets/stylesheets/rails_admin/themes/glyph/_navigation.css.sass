@@ -43,7 +43,19 @@
 .nav-list > li
   border: 1px solid transparent
   margin-right: -1px
+  margin-left: -35px
+  margin-bottom: 1px
   +single-transition(all, 0.2s, ease)
+  & > a
+    padding: 3px 15px 3px 34px
+
+.nav.nav-list
+  .nav-level-1
+    padding-left: 34px + 10px
+  .nav-level-2
+    padding-left: 34px + 20px
+  .nav-level-3
+    padding-left: 34px + 30px
 
 .nav-list > .active,
 .nav-list > li:hover

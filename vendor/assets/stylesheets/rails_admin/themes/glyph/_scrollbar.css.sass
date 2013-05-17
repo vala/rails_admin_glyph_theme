@@ -37,11 +37,28 @@
   &:window-inactive
     -webkit-box-shadow: inset 0 0 0 1px darken($white, 10%), inset 0 0 0 6px darken($white, 5%)
 
-
-
 ::-webkit-scrollbar-corner
   /* Coin de la fenêtre */
   background: $bodyBackground
+
+::-webkit-scrollbar-button
+  /* Boutons */
+  height: 20px
+  background: $bodyBackground url('/assets/rails_admin/themes/glyph/images/sprites-arrows-vert.png') no-repeat center top
+
+
+::-webkit-scrollbar-button:increment
+  /* Bouton pour descendre */
+  background-position: center bottom
+
+::-webkit-scrollbar-button:horizontal
+  /* Boutons horizontaux */
+  width: 20px
+  background: $bodyBackground url('/assets/rails_admin/themes/glyph/images/sprites-arrows-hor.png') no-repeat left center
+
+::-webkit-scrollbar-button:horizontal:increment
+  /* Bouton pour aller à droite */
+  background-position: right center
 
 
 body
