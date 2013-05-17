@@ -1,7 +1,60 @@
+@import "compass/css3/transition"
+@import "compass/css3/opacity"
 //***************************************************************
 //    FuelUX Overriding by Glyph
 //***************************************************************
 // ------------------------ Checkbox  ------------------------- //
+
+
+.checkbox,
+.radio
+  position: relative
+  -webkit-backface-visibility: hidden
+  input
+    outline: none !important
+    +opacity(0)
+  &.checked
+    .icon
+      +opacity(1)
+      display: block\9
+    .icon-to-fade,
+      +opacity(0)
+      display: none\9
+  &.disabled,
+    color: $inputDisabledBackground
+    cursor: default
+    &.icon
+      opacity: 0
+      display: none\9
+    &.icon-to-fade,
+      opacity: 1
+      display: block\9
+    &.checked
+      .icon
+        opacity: 1
+        display: block\9
+      .icon-to-fade,
+        opacity: 0
+        display: none\9
+  .icon,
+  .icon-to-fade
+    position: absolute
+    left: 0
+    top: 9px
+    +opacity(1)
+    +fontAwesome
+    +single-transition(opacity, 0.1s, linear)
+    -webkit-backface-visibility: hidden
+  .icon
+    +opacity(0)
+    z-index: 1
+    display: none\9
+    &:before
+      content: "\f046"
+  .icon-to-fade
+    &:before
+      content: "\f096"
+
 
 
 // ------------------------ Spinner  ------------------------- //

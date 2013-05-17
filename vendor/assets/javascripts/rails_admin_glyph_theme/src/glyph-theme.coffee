@@ -29,6 +29,18 @@ class FileUploadBuilder
       @$el.data("file-upload", this)
 
 
+class CheckboxBuilder
+  constructor: (@$el) ->
+    unless @$el.data("checkbox")
+      @$el.wrap('<label class="checkbox"/>')
+      @$el.closest('.checkbox').prepend("<span class='icon'></span><span class='icon-to-fade'></span>")
+      @$el.closest(".checkbox").on 'click', ->
+        setupLabel()
+      setupLabel()
+      # Store object in "checkbox" data key on dom element
+      @$el.data("checkbox", this)
+
+
 class SpinnerBuilder
   template:
     """
@@ -71,6 +83,7 @@ class FormInputs
   fieldTypes:
     'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
+    'input[type="checkbox"]': CheckboxBuilder
     'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
@@ -91,8 +104,21 @@ $ ->
     e.stopPropagation()
 
   # Add class
-  $("body").addClass 'glyph-theme-js'
-
+  $("body.rails_admin").addClass 'glyph-theme-js'
 
   # Form Inputs constructor
   new FormInputs("form")
+
+  # Toggle checkbox list & export
+  $(document).on "click", "#list input.toggle", ->
+    $("#list [name='bulk_ids[]']").prop("checked", $(this).is(":checked")).closest('.checkbox').toggleClass('checked')
+
+  $(document).on "click", "#fields_to_export label input#check_all", ->
+    elems = $("#fields_to_export label input")
+    $checbox_checked = $("#fields_to_export label input#check_all").is(":checked")
+    if $checbox_checked
+      $(elems).closest('.checkbox').addClass 'checked'
+      $(elems).prop "checked", true
+    else
+      $(elems).closest('.checkbox').removeClass 'checked'
+      $(elems).prop "checked", false
