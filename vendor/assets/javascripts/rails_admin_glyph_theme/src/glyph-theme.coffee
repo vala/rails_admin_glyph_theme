@@ -83,7 +83,7 @@ class FormInputs
   fieldTypes:
     'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
-    'input[type="checkbox"]': CheckboxBuilder
+    'input[type="checkbox"]:visible': CheckboxBuilder
     'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
