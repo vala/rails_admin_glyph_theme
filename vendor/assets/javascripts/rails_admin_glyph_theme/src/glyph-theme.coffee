@@ -81,7 +81,7 @@ class SelectBuilder
 
 class FormInputs
   fieldTypes:
-    # 'input[type="file"]': FileUploadBuilder
+    'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
     'input[type="checkbox"]:visible': CheckboxBuilder
     'select': SelectBuilder
