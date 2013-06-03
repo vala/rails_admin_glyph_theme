@@ -97,7 +97,6 @@ class FormInputs
       @$el.find(selector).each ->
         new klass($(this))
 
-
 $ ->
   # Hack for Ipad
   $("body").on "touchstart.dropdown", ".dropdown-menu", (e) ->
