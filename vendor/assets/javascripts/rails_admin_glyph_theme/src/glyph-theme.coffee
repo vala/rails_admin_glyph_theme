@@ -60,7 +60,7 @@ class SpinnerBuilder
       @$el.addClass "spinner-input"
       $spinner_wrapper = @$el.wrap("<div class='spinner'/>")
       $(@template).insertAfter @$el
-      @$el.closest(".spinner").spinner()
+      # @$el.closest(".spinner").spinner('value')
       # Store object in "spinner" data key on dom element
       @$el.data("spinner", this)
 
