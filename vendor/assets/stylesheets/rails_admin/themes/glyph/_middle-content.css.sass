@@ -61,9 +61,17 @@
   /* Styling all  */
   .form-horizontal .tab-content .tab-pane
     border-left: 5px solid  $whiteDarker
-
-  .form-horizontal.denser .controls .nav
-    margin-bottom: 0px
+    fieldset
+      legend
+        float: none
+        margin-left: 0
+    .tab-content .tab-pane.fields
+      border-left: 5px solid  darken($whiteDarker, 10%)
+      margin-left: 6px
+      fieldset
+        legend
+          i
+            margin-left: 20px
 
   .form-horizontal.denser
     +tabsContent

@@ -73,7 +73,9 @@ class SelectBuilder
     else
       unless @$el.data("select")
         $jqueryMultiSelect = @$el.closest('.controls').find('.ra-multiselect').remove()
-        @$el.closest('select').selectpicker()
+        @$el.closest('select').selectpicker(
+          title: '-- Selectionnez --'
+        )
         # Store object in "spinner" data key on dom element
         @$el.data("select", this)
 
