@@ -100,6 +100,32 @@
   #rails_admin_nestable
     +tabsContent
     padding: 0px 5px
+    .checkbox.inline
+      margin-top: 10px
+      display: inline-block
+      padding: 4px 12px
+      margin-bottom: 0
+      font-size: 14px
+      line-height: 20px
+      text-align: center
+      vertical-align: middle
+      cursor: pointer
+      color: #333333
+      background-color: $btnBackground
+      border-color: #f7f7f7 #f7f7f7 #d1d1d1
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+      border: 1px solid $btnBorder
+      -webkit-border-radius: 1px
+      -moz-border-radius: 1px
+      border-radius: 1px
+      &:hover
+        background-color: $btnBackgroundHighlight
+      input
+        margin-right: -20px
+    .form-actions
+      padding-left: 0
+      padding-bottom: 0
+
     #tree_nodes
       /* Items */
       .dd-placeholder,
