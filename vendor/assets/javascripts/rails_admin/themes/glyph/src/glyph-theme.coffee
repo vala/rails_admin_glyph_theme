@@ -1,32 +1,32 @@
-# class FileUploadBuilder
-#   template:
-#     """
-#     <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">
-#       <div class=\"input-append\">
-#         <div class=\"uneditable-input span3\">
-#           <i class=\"icon-file fileupload-exists\"></i>
-#           <span class=\"fileupload-preview\"></span>
-#         </div>
-#         <span class=\"btn btn-file\">
-#           <span class=\"fileupload-new\">Sélectionnez</span>
-#           <span class=\"fileupload-exists\">Changer</span>
-#         </span>
-#         <a class=\"btn fileupload-exists\" data-dismiss=\"fileupload\" href=\"#\">Supprimer</a>
-#       </div>
-#     </div>
-#     """
+class FileUploadBuilder
+  template:
+    """
+    <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">
+      <div class=\"input-append\">
+        <div class=\"uneditable-input span3\">
+          <i class=\"icon-file fileupload-exists\"></i>
+          <span class=\"fileupload-preview\"></span>
+        </div>
+        <span class=\"btn btn-file\">
+          <span class=\"fileupload-new\">Sélectionnez</span>
+          <span class=\"fileupload-exists\">Changer</span>
+        </span>
+        <a class=\"btn fileupload-exists\" data-dismiss=\"fileupload\" href=\"#\">Supprimer</a>
+      </div>
+    </div>
+    """
 
-#   constructor: (@$el) ->
-#     $uploadedFile = @$el.parent().find('a, img').addClass('uploaded-file').remove()
+  constructor: (@$el) ->
+    $uploadedFile = @$el.parent().find('a, img').addClass('uploaded-file').remove()
 
-#     unless @$el.data("file-upload")
-#       $container = @$el.parent().html(@template)
-#       # Append input to file buttons
-#       $container.find(".btn-file").append(@$el)
-#       # Add preview link if existing
-#       $container.prepend($uploadedFile) if $uploadedFile.length
-#       # Store object in "file-upload" data key on dom element
-#       @$el.data("file-upload", this)
+    unless @$el.data("file-upload")
+      $container = @$el.parent().html(@template)
+      # Append input to file buttons
+      $container.find(".btn-file").append(@$el)
+      # Add preview link if existing
+      $container.prepend($uploadedFile) if $uploadedFile.length
+      # Store object in "file-upload" data key on dom element
+      @$el.data("file-upload", this)
 
 
 class SpinnerBuilder
@@ -71,7 +71,7 @@ class SelectBuilder
 
 class FormInputs
   fieldTypes:
-    'input[type="file"]': FileUploadBuilder
+    # 'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
     'select': SelectBuilder
 
