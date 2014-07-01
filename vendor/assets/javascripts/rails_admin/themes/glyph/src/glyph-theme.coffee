@@ -73,7 +73,7 @@ class FormInputs
   fieldTypes:
     # 'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
-    'select': SelectBuilder
+    # 'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
     # # Constructor when page is loaded by pjax
