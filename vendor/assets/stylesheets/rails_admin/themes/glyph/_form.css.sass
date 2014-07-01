@@ -34,7 +34,7 @@ input[type="color"],
 .uneditable-input,
 .cke_contents,
 .cke_dialog_ui_input_textarea textarea,
-.cke_dialog_ui_input_text input,
+.cke_dialog_ui_input_text input
   border: 1px solid $inputBorder
   border-top: 1px solid darken($inputBorder, 5%)
   +box-shadow(rgba(0,0,0,0.1) 0px 1px 2px 0px inset)
@@ -86,13 +86,58 @@ input[type="checkbox"]
   .fileupload-new .input-append .btn-file
     +border-radius($baseBorderRadius)
 
-  /* Bootstrap Select */
-  .bootstrap-select
-    &.btn-group,
-    &.btn-group[class*="span"]
-      margin-bottom: 0
-    .btn:focus
-      outline: 0 !important
+  /* Seletectiz */
+  .selectize-dropdown, 
+  .selectize-dropdown.form-control
+    +border-radius($baseBorderRadius)
+
+  .selectize-input
+    border: 1px solid $inputBorder
+    border-top: 1px solid darken($inputBorder, 5%)
+    +box-shadow(rgba(0,0,0,0.1) 0px 1px 2px 0px inset)
+    +border-radius($inputBorderRadius)
+    +single-transition(all, 0.2s, linear)
+    // Hover state
+    &:hover
+      background-color: darken($inputBackground, 0.7%)
+      border: 1px solid darken($inputBorder, 2%)
+      border-top: 1px solid darken($inputBorder, 7%)
+      +box-shadow(rgba(0,0,0,0.2) 0px 1px 2px 0px inset)
+
+    // Focus state
+    &:focus
+      border: 1px solid darken($inputBorder, 3%)
+      border-top: 1px solid darken($inputBorder, 8%)
+      +box-shadow(rgba(0,0,0,0.3) 0px 1px 2px 0px inset)
+      outline: 0
+    
+    &.dropdown-active
+      +border-radius($inputBorderRadius)
+
+  .selectize-input.input-active,
+  .selectize-input.input-active:hover,
+  .selectize-control.multi .selectize-input.active
+    border: 1px solid darken($inputBorder, 3%)
+    border-top: 1px solid darken($inputBorder, 8%)
+    +box-shadow(rgba(0,0,0,0.3) 0px 1px 2px 0px inset)
+    outline: 0
+
+  .selectize-dropdown, 
+  .selectize-input, 
+  .selectize-input input
+    color: $gray
+
+  .selectize-control
+    padding-right: 10px
+  .selectize-input, 
+  .selectize-control.single 
+  .selectize-input.input-active  
+    background: $inputBackground
+
+  .selectize-control
+    &.multi
+      width: 50%
+      float: left
 
   /* display radio & checkbox in middle */
   label.checkbox

@@ -61,9 +61,8 @@ class SelectBuilder
     else
       unless @$el.data("select")
         $jqueryMultiSelect = @$el.closest('.controls').find('.ra-multiselect').remove()
-        @$el.closest('select').selectpicker(
-          title: '-- Selectionnez --'
-        )
+        @$el.closest('select').selectize()
+        
         # Store object in "spinner" data key on dom element
         @$el.data("select", this)
 
@@ -73,7 +72,7 @@ class FormInputs
   fieldTypes:
     # 'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
-    # 'select': SelectBuilder
+    'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
     # # Constructor when page is loaded by pjax
