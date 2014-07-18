@@ -1,26 +1,24 @@
 class FileUploadBuilder
   template:
     """
-    <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">
-      <div class=\"input-append\">
-        <div class=\"uneditable-input span3\">
-          <i class=\"icon-file fileupload-exists\"></i>
-          <span class=\"fileupload-preview\"></span>
-        </div>
-        <span class=\"btn btn-file\">
-          <span class=\"fileupload-new\">Sélectionnez</span>
-          <span class=\"fileupload-exists\">Changer</span>
-        </span>
-        <a class=\"btn fileupload-exists\" data-dismiss=\"fileupload\" href=\"#\">Supprimer</a>
+    <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">
+      <div class=\"span3 control-fileinput form-control\" data-trigger=\"fileinput\">
+        <i class=\"icon-file fileinput-exists\"></i>
+        <span class=\"fileinput-filename\"></span>
       </div>
+      <span class=\"btn btn-default btn-file\">
+        <span class=\"fileinput-new\">Sélectionnez</span>
+        <span class=\"fileinput-exists\">Changer</span>
+      </span>
+      <a class=\"btn btn-default fileinput-exists\" data-dismiss=\"fileinput\" href=\"#\">Supprimer</a>
     </div>
     """
-
+    
   constructor: (@$el) ->
     $uploadedFile = @$el.parent().find('a, img').addClass('uploaded-file').remove()
 
     unless @$el.data("file-upload")
-      $container = @$el.parent().html(@template)
+      $container = @$el.parent().parent().html(@template)
       # Append input to file buttons
       $container.find(".btn-file").append(@$el)
       # Add preview link if existing
@@ -62,23 +60,24 @@ class SelectBuilder
       unless @$el.data("select")
         $jqueryMultiSelect = @$el.closest('.controls').find('.ra-multiselect').remove()
         @$el.closest('select').selectize()
-        
-        # Store object in "spinner" data key on dom element
-        @$el.data("select", this)
 
+        @$el.data("select", this)
 
 
 class FormInputs
   fieldTypes:
-    # 'input[type="file"]': FileUploadBuilder
+    'input[type="file"]': FileUploadBuilder
     'input[type="number"]': SpinnerBuilder
     'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
-    # # Constructor when page is loaded by pjax
-    $(document).on "ready pjax:end nested:fieldAdded", =>
+    # # Constructor when nested field is added
+    $(document).on "nested:fieldAdded", =>
       @$el = $(@selector)
       @processFields()
+
+    @$el = $(@selector)
+    @processFields()
 
   processFields: ->
     $.each @fieldTypes, (selector, klass) =>

@@ -34,7 +34,8 @@ input[type="color"],
 .uneditable-input,
 .cke_contents,
 .cke_dialog_ui_input_textarea textarea,
-.cke_dialog_ui_input_text input
+.cke_dialog_ui_input_text input,
+.control-fileinput
   border: 1px solid $inputBorder
   border-top: 1px solid darken($inputBorder, 5%)
   +box-shadow(rgba(0,0,0,0.1) 0px 1px 2px 0px inset)
@@ -78,12 +79,21 @@ input[type="checkbox"]
     background-color: $inputDisabledBackground
     &:hover
       background-color: $inputDisabledBackground
+  .fileinput .form-control
+    padding-top: 0
+    padding-bottom: 0    
+    height: 28px
+    padding: 0 6px
+  .fileinput
+    display: block  
+    line-height: 28px
+    width: 100%
   .uploaded-file img,
   .uploaded-file
     margin-bottom: 5px
-  .fileupload
+  .fileinput
     margin-bottom: 0
-  .fileupload-new .input-append .btn-file
+  .fileinput.input-group .btn-file
     +border-radius($baseBorderRadius)
 
   /* Seletectiz */
