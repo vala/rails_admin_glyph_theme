@@ -84,6 +84,7 @@ input[type="checkbox"]
     padding-bottom: 0    
     height: 28px
     padding: 0 6px
+    overflow: hidden
   .fileinput
     display: block  
     line-height: 28px
@@ -93,6 +94,9 @@ input[type="checkbox"]
     margin-bottom: 5px
   .fileinput
     margin-bottom: 0
+    .fileinput-filename
+      position: absolute
+      left: 25px
   .fileinput.input-group .btn-file
     +border-radius($baseBorderRadius)
 
