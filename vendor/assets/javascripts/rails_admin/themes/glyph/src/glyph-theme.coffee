@@ -16,13 +16,14 @@ class FileUploadBuilder
     
   constructor: (@$el) ->
     $uploadedFile = @$el.parent().find('a, img').addClass('uploaded-file').remove()
-
+    $uploadedHint = @$el.parent().parent().find('.help-block').remove()
     unless @$el.data("file-upload")
       $container = @$el.parent().parent().html(@template)
       # Append input to file buttons
       $container.find(".btn-file").append(@$el)
       # Add preview link if existing
       $container.prepend($uploadedFile) if $uploadedFile.length
+      $container.append($uploadedHint)
       # Store object in "file-upload" data key on dom element
       @$el.data("file-upload", this)
 
