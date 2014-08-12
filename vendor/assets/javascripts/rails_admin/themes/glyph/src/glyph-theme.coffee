@@ -66,8 +66,8 @@ class SelectBuilder
 
 class FormInputs
   fieldTypes:
-    'input[type="file"]': FileUploadBuilder
-    'input[type="number"]': SpinnerBuilder
+    # 'input[type="file"]': FileUploadBuilder
+    # 'input[type="number"]': SpinnerBuilder
     'select': SelectBuilder
 
   constructor: (@selector, options = {}) ->
