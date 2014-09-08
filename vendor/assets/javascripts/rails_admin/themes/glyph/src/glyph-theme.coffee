@@ -59,7 +59,7 @@ class SelectBuilder
     else
       unless @$el.data("select")
         $jqueryMultiSelect = @$el.closest('.controls').find('.ra-multiselect').remove()
-        @$el.closest('select').selectize()
+        @$el.closest('select').multiselect()
 
         @$el.data("select", this)
 
