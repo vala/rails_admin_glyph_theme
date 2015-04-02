@@ -1,46 +1,54 @@
 /* New style for all link in nav */
 .navbar .nav > li > a,
-.nav-list > li > a
+.nav-pills.nav-stacked > li > a
   +text-shadow(none)
   font-size: 1.1em
 
-.nav-header
+.dropdown-header
   font-size: 1.3em
   +font-bold
   margin-top: 20px
+  text-transform: uppercase
+  padding: 3px 15px
 
 /* Nav header */
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner
   +box-shadow(none)
 
-.navbar .brand
+.navbar-brand
   +text-shadow(none)
   text-transform: uppercase
   +font-bold
   padding: 14px 0px 12px 35px
+  font-size: 20px
+  color: $gray
   small
     font-weight: normal
     font-size: 0.6em
     letter-spacing: 0px
+    color: $red
 
 /* sidebar-nav */
-.well.sidebar-nav
+.sidebar-nav
   border-width: 0px
   +box-shadow(none)
   margin-bottom: 0
   border-right: 1px solid $whiteDarker
   background: none
+  padding: 9px 0 9px 20px
 
-.nav-list
+.nav-pills.nav-stacked
   padding-right: 0
+  padding-left: 15px
 
-.nav-list > li > a,
-.nav-list .nav-header
+.nav-pills.nav-stacked > li > a,
+.nav-pills.nav-stacked .dropdown-header
   margin-right: 0px
   margin-left: 0px
+  +border-radius(0)
 
 /* Li states */
-.nav-list > li
+.nav-pills.nav-stacked > li
   border: 1px solid transparent
   margin-right: -1px
   margin-left: -35px
@@ -48,8 +56,9 @@
   +single-transition(all, 0.2s, ease)
   & > a
     padding: 3px 15px 3px 34px
+    color: #000
 
-.nav.nav-list
+.nav-pills.nav-stacked
   .nav-level-1
     padding-left: 34px + 10px
   .nav-level-2
@@ -57,31 +66,31 @@
   .nav-level-3
     padding-left: 34px + 30px
 
-.nav-list > .active,
-.nav-list > li:hover
+.nav-pills.nav-stacked > .active,
+.nav-pills.nav-stacked > li:hover
   background: $white
   border-color: $whiteDarker
   border-right-color: white
 
 /* Links states */
-.nav-list > li
+.nav-pills.nav-stacked > li
   a
     font-size: 1.1em
 
-.nav.nav-list > li > a:hover
+.nav-pills.nav-stacked > li > a:hover
   +text-shadow(none)
   color: $black
   background: none
 
-.nav-list > .active > a,
-.nav-list > .active > a:hover
+.nav-pills.nav-stacked > .active > a,
+.nav-pills.nav-stacked > .active > a:hover
   +text-shadow(none)
   color: $black
   background: none
 
 /* No states in nav-header */
-.nav-list > li.nav-header,
-.nav-list > li.nav-header:hover
+.nav-pills.nav-stacked > li.dropdown-header,
+.nav-pills.nav-stacked > li.dropdown-header:hover
   padding-left: 0px
   border-width: 0px
   background: none

@@ -37,14 +37,16 @@ body.rails_admin
 
   a
     +single-transition(all, 0.3s, ease)
+    color: $linkColor
     &:hover
       text-decoration: none
+      color: $linkColorHover
     &:focus
       outline: none
     &.link-img
       +inline-block
       margin: auto
-
+  
   .icon-white
     color: white
 
